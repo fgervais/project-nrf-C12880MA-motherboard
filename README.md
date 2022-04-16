@@ -3,10 +3,10 @@
 ## Init
 
 ```bash
-mkdir project-nrf-connect-test
-cd project-nrf-connect-test
-docker run --rm -it -u $(id -u):$(id -g) -v $(pwd):/workdir/project coderbyheart/fw-nrfconnect-nrf-docker:v1.8-branch bash
-west init -m https://github.com/fgervais/project-nrf-thread-switch.git .
+mkdir project-nrf-C12880MA-motherboard
+cd project-nrf-C12880MA-motherboard
+docker run --rm -it -u $(id -u):$(id -g) -v $(pwd):/workdir/project nrfassettracker/nrfconnect-sdk:v1.9-branch bash
+west init -m https://github.com/fgervais/project-nrf-C12880MA-motherboard.git .
 west update
 ```
 
@@ -52,24 +52,4 @@ nrfutil dfu usb-serial -pkg first.zip -p /dev/ttyACM0
 
 # Hardware
 
-https://github.com/fgervais/project-nrf-thread-switch_hardware
-
-## Border Router
-
-![Border Router](assets/img/border-router.jpg)
-
-# Battery Life
-
-## Power consumption
-
-### Idle
-
-![Idle Consumption](assets/img/idle-consumption.png)
-
-### Button press
-
-![Press Consumption](assets/img/press-consumption.png)
-
-## CR2032 expected life
-
-![Expected Life](assets/img/battery-life-calculation.jpg)
+https://github.com/fgervais/project-nrf-C12880MA-motherboard_hardware
