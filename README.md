@@ -18,18 +18,11 @@ network key:
 CONFIG_OPENTHREAD_NETWORKKEY="00:11:22:33:44:55:66:77:88:99:aa:bb:cc:dd:ee:ff"
 ```
 
-## Docker environment
-
-```bash
-cd application
-docker-compose run nrf bash
-```
-
 ## Build
 
 ```bash
 cd application
-west build -b nrf52840dongle_nrf52840 -s app
+docker-compose run nrf west build -b nrf52840dongle_nrf52840 -s app
 ```
 
 ## menuconfig
